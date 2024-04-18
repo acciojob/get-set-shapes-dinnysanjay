@@ -1,7 +1,35 @@
 //complete this code
-class Rectangle {}
+class Rectangle {
+	constructor(width: number, height: number){
+		this._width =width: number;
+		this._height =height: number;
+	}
+	get modifiedWidthAndHeight(){
+		
+	}
+	getArea(){
+		return a= (this._width * this._height)/2;
+	}
+}
 
-class Square extends Animal {}
+class Square extends Rectangle {
+	constructor(width: number, height: number, side: number){
+		super(width: number, height: number, side: number);
+	}
+getPerimeter(){
+	return p=4*side;
+}
+}
+const rectangle = new Rectangle(5, 10);
+console.log(rectangle.width); // Output: 5
+console.log(rectangle.height); // Output: 10
+console.log(rectangle.getArea()); // Output: 50
+
+const square = new Square(7);
+console.log(square.width); // Output: 7
+console.log(square.height); // Output: 7
+console.log(square.getArea()); // Output: 49
+console.log(square.getPerimeter()); // Output: 28
 
 // Do not change the code below this line
 window.Rectangle = Rectangle;
