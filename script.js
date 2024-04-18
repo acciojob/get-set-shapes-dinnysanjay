@@ -1,25 +1,34 @@
 //complete this code
 class Rectangle {
-	constructor(width: number, height: number){
-		this._width =width: number;
-		this._height =height: number;
+	constructor(width, height){
+		this._width = width;
+		this._height = height;
 	}
-	get modifiedWidthAndHeight(){
-		
+
+	get width(){
+		return this._width;
 	}
+
+	get height(){
+		return this._height;
+	}
+
 	getArea(){
-		return a= (this._width * this._height)/2;
+		return this._width * this._height;
 	}
 }
 
 class Square extends Rectangle {
-	constructor(width: number, height: number, side: number){
-		super(width: number, height: number, side: number);
+	constructor(side){
+		super(side, side);
 	}
-getPerimeter(){
-	return p=4*side;
+
+	getPerimeter(){
+		return 4 * this._width;
+	}
 }
-}
+
+// test your code
 const rectangle = new Rectangle(5, 10);
 console.log(rectangle.width); // Output: 5
 console.log(rectangle.height); // Output: 10
@@ -30,7 +39,6 @@ console.log(square.width); // Output: 7
 console.log(square.height); // Output: 7
 console.log(square.getArea()); // Output: 49
 console.log(square.getPerimeter()); // Output: 28
-
 // Do not change the code below this line
 window.Rectangle = Rectangle;
 window.Square = Square;
